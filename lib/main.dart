@@ -16,9 +16,14 @@ class Task1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white10,
       appBar: AppBar(
+        backgroundColor: Colors.white12,
         title: Center(
-          child: Text(title),
+          child: Text(
+            title,
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       ),
       body: Column(
@@ -26,49 +31,80 @@ class Task1 extends StatelessWidget {
         children: [
           Container(
             margin: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: Colors.tealAccent,
+              color: Colors.white,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: const Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Column(
                   children: [
-                    Icon(
-                      Icons.add_alert_rounded,
-                      size: 50,
-                      color: Colors.amber,
+                    Container(
+                      padding: const EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.amber[200],
+                      ),
+                      child: Icon(
+                        Icons.add_alert_rounded,
+                        size: 50,
+                        color: Colors.amber,
+                      ),
                     ),
                     Text(
                       "Follow",
-                      style: TextStyle(color: Colors.amber, fontSize: 20),
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal),
                     ),
                   ],
                 ),
                 Column(
                   children: [
-                    Icon(
-                      Icons.message_rounded,
-                      size: 50,
-                      color: Colors.amber,
+                    Container(
+                      padding: EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.amber[200],
+                      ),
+                      child: Icon(
+                        Icons.message_rounded,
+                        size: 50,
+                        color: Colors.amber,
+                      ),
                     ),
                     Text(
                       "Message",
-                      style: TextStyle(color: Colors.amber, fontSize: 20),
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal),
                     ),
                   ],
                 ),
                 Column(
                   children: [
-                    Icon(
-                      Icons.favorite_rounded,
-                      size: 50,
-                      color: Colors.amber,
+                    Container(
+                      padding: EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.amber[200],
+                      ),
+                      child: Icon(
+                        Icons.favorite_border_rounded,
+                        size: 50,
+                        color: Colors.amber,
+                      ),
                     ),
                     Text(
                       "Favorite",
-                      style: TextStyle(color: Colors.amber, fontSize: 20),
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.normal),
                     ),
                   ],
                 ),
