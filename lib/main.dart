@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Task1(title: "Task1"),
     ),
   );
 }
 
 class Task1 extends StatelessWidget {
-  Task1({super.key, required this.title});
+  const Task1({super.key, required this.title});
 
   final String title;
 
@@ -17,13 +17,15 @@ class Task1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text(title)),
+        title: Center(
+          child: Text(title),
+        ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.tealAccent,
               borderRadius: BorderRadius.circular(20),
@@ -34,12 +36,12 @@ class Task1 extends StatelessWidget {
                 Column(
                   children: [
                     Icon(
-                      Icons.add,
+                      Icons.add_alert_rounded,
                       size: 50,
                       color: Colors.amber,
                     ),
                     Text(
-                      "add",
+                      "Follow",
                       style: TextStyle(color: Colors.amber, fontSize: 20),
                     ),
                   ],
@@ -47,12 +49,12 @@ class Task1 extends StatelessWidget {
                 Column(
                   children: [
                     Icon(
-                      Icons.alarm,
+                      Icons.message_rounded,
                       size: 50,
                       color: Colors.amber,
                     ),
                     Text(
-                      "alarm",
+                      "Message",
                       style: TextStyle(color: Colors.amber, fontSize: 20),
                     ),
                   ],
@@ -60,12 +62,12 @@ class Task1 extends StatelessWidget {
                 Column(
                   children: [
                     Icon(
-                      Icons.timelapse,
+                      Icons.favorite_rounded,
                       size: 50,
                       color: Colors.amber,
                     ),
                     Text(
-                      "time",
+                      "Favorite",
                       style: TextStyle(color: Colors.amber, fontSize: 20),
                     ),
                   ],
